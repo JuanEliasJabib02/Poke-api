@@ -8,7 +8,6 @@ const PokedexInfo = () => {
 
   const [pokemon, setPokemon] = useState()
   const { id } = useParams()
-  
   // Get Pokemon by id
   useEffect(() => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${id}`
@@ -20,7 +19,9 @@ const PokedexInfo = () => {
   console.log(pokemon)
 
   return (
-    <div>{id}</div>
+    <div>
+      <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
+    </div>
   )
 }
 
