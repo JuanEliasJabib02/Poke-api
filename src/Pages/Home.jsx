@@ -1,16 +1,19 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { setNameTrainerGlobal } from '../store/slices/nameTrainer'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const nameTrainer = e.target["trainer-name"].value.trim()
     dispatch(setNameTrainerGlobal(nameTrainer))
     e.target["trainer-name"].value = " "
+    navigate("/pokedex")
   }
   return (
     <div>
