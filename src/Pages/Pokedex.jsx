@@ -54,7 +54,8 @@ const Pokedex = () => {
   const handleChange = (e) => {
     e.preventDefault()
       const input = e.target.value
-      setTypeSelected(input) 
+    setTypeSelected(input) 
+    setPage(1)
   }
 
 
