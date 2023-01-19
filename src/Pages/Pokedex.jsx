@@ -12,12 +12,15 @@ const Pokedex = () => {
 
 
   useEffect(() => {
-    const URL = "https://pokeapi.co/api/v2/pokemon/?limit=1&offset=0"
+
+    //Get all pokemons
+    const URL = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
     axios.get(URL)
       .then(res => setPokemons(res.data?.results))
       .catch(err => console.log(err))
   }, [])
   
+
   return (
     <div>
       <h2>Welcome {nameTrainer}, here you can find your favorite pokemon</h2>
