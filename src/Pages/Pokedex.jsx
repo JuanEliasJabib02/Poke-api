@@ -12,6 +12,7 @@ const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
 
+  const [types, setTypes] = useState()
 
   useEffect(() => {
 
@@ -21,6 +22,15 @@ const Pokedex = () => {
       .then(res => setPokemons(res.data?.results))
       .catch(err => console.log(err))
   }, [])
+
+  useEffect(() => {
+    //Get all types
+    const URL = "https://pokeapi.co/api/v2/type"
+    axios.get(URL)
+      .then(res => setTypes(res.data.results))
+      .catch(err => console.log(err))
+  })
+  console.log(types)
 
   // For do the input to search by name
   const handleSubmit = (e) => {
@@ -36,6 +46,18 @@ const Pokedex = () => {
         <input type="text" id="pokemon-filter" />
         <button>Search</button>
       </form>
+
+      <select>
+        <option>Choose by type</option>
+        {
+          types?.map(type => (
+            <option value={"All Pokemons"} key={type.url}>
+              {type.name}
+            </option>
+          ))
+        }
+        
+      </select>
       <div className='poke-container'>
         {
           pokemons?.map(pokemon => (
