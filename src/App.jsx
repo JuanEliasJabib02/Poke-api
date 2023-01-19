@@ -1,19 +1,20 @@
 
-import { useSelector } from 'react-redux'
+
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
+import ProtectedRoutes from './components/ProtectedRoutes'
+import Pokedex from './Pages/Pokedex'
 
 function App() {
-
-  const nameTrainer = useSelector(state => state.trainer)
- 
-  console.log(nameTrainer)
   return (
     <div className="App">
       <Routes>
         < Route path='/' element={<Home />} />
-        < Route />
+        {/* Protected Routes */}
+        < Route element={<ProtectedRoutes />}>
+          < Route path='/pokedex' element={< Pokedex/> } />
+        </Route>
       </Routes>
     </div>
   )
