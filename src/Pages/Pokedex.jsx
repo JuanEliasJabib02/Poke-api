@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import axios from "axios"
 import PokemonCard from '../components/Pokedex/PokemonCard'
 import { useNavigate } from 'react-router-dom'
+import Pagination from '../components/Pokedex/Pagination'
 
 const Pokedex = () => {
 
@@ -27,15 +28,13 @@ const Pokedex = () => {
     }
     else {
       console.log("executed here")
-      const URL = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
+      const URL = "https://pokeapi.co/api/v2/pokemon/?limit=151&offset=0"
       axios.get(URL)
         .then(res => setPokemons(res.data?.results))
         .catch(err => console.log(err))
     }
   }, [typeSelected])
 
-  console.log(typeSelected)
-  
   useEffect(() => {
     //Get all types
     const URL = "https://pokeapi.co/api/v2/type"
@@ -57,6 +56,17 @@ const Pokedex = () => {
       const input = e.target.value
       setTypeSelected(input) 
   }
+
+
+  //Pagination
+
+  const [page, setPage] = useState(1)
+  const [pokePerPage, setPokePerPage] = useState(8)
+
+  const initialPoke = (page - 1) * pokePerPage
+  const finalPoke = page * pokePerPage
+  const maxPage = pokemons && Math.ceil(pokemons.length / pokePerPage)
+  console.log(maxPage)
   
   return (
     <div>
@@ -78,7 +88,7 @@ const Pokedex = () => {
       </select>
       <div className='poke-container'>
         {
-          pokemons?.map(pokemon => (
+          pokemons?.slice(initialPoke,finalPoke).map(pokemon => (
             <PokemonCard
               key={pokemon.url}
               url={pokemon.url} 
@@ -86,6 +96,10 @@ const Pokedex = () => {
           ))
         }
       </div>
+      < Pagination
+        page={page}
+        maxPage={maxPage}
+      />
     </div>
   )
 }
