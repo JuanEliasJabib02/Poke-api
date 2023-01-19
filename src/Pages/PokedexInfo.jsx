@@ -16,7 +16,6 @@ const PokedexInfo = () => {
       .catch(err => console.log(err))   
   }, [id])
   
-  console.log(pokemon)
 
   return (
     <div>

@@ -14,8 +14,9 @@ const Pokedex = () => {
 
   const [types, setTypes] = useState()
 
-  useEffect(() => {
+  const [typeSelected, setTypeSelected] = useState("Choose by type")
 
+  useEffect(() => {
     //Get all pokemons
     const URL = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
     axios.get(URL)
@@ -29,14 +30,22 @@ const Pokedex = () => {
     axios.get(URL)
       .then(res => setTypes(res.data.results))
       .catch(err => console.log(err))
-  })
-  console.log(types)
+  },[])
 
   // For do the input to search by name
   const handleSubmit = (e) => {
     e.preventDefault()
     const inputPokemonName = e.target["pokemon-filter"].value.trim().toLowerCase()
     navigate(`/pokedex/${inputPokemonName}`)
+  }
+
+  console.log(typeSelected)
+  // For filter by type
+
+  const handleChange = (e) => {
+    e.preventDefault()
+      const input = e.target.value
+      setTypeSelected(input) 
   }
   
   return (
@@ -47,24 +56,22 @@ const Pokedex = () => {
         <button>Search</button>
       </form>
 
-      <select>
-        <option>Choose by type</option>
+      <select onChange={handleChange}>
+        <option value="choose-by-type">Choose by type</option>
         {
           types?.map(type => (
-            <option value={"All Pokemons"} key={type.url}>
+            <option value={type.name} key={type.url}>
               {type.name}
             </option>
           ))
-        }
-        
+        } 
       </select>
       <div className='poke-container'>
         {
           pokemons?.map(pokemon => (
             <PokemonCard
               key={pokemon.url}
-              url={pokemon.url}
-              
+              url={pokemon.url} 
             />
           ))
         }
