@@ -99,6 +99,7 @@ const Pokedex = () => {
       < Pagination
         page={page}
         maxPage={maxPage}
+        setPage={setPage}
       />
     </div>
   )
