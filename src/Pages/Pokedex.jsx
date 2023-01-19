@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 const Pokedex = () => {
 
   const navigate = useNavigate()
+
   const nameTrainer = useSelector(state => state.nameTrainer)
 
   const [pokemons, setPokemons] = useState()
@@ -18,12 +19,23 @@ const Pokedex = () => {
 
   useEffect(() => {
     //Get all pokemons
-    const URL = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
-    axios.get(URL)
-      .then(res => setPokemons(res.data?.results))
-      .catch(err => console.log(err))
-  }, [])
+    if (typeSelected !== "Choose by type") {
+      const URL = typeSelected
+      axios.get(URL)
+        .then(res => setPokemons(res.data?.pokemon.map(e => e.pokemon)))
+        .catch(err => console.log(err))
+    }
+    else {
+      console.log("executed here")
+      const URL = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0"
+      axios.get(URL)
+        .then(res => setPokemons(res.data?.results))
+        .catch(err => console.log(err))
+    }
+  }, [typeSelected])
 
+  console.log(typeSelected)
+  
   useEffect(() => {
     //Get all types
     const URL = "https://pokeapi.co/api/v2/type"
@@ -38,8 +50,6 @@ const Pokedex = () => {
     const inputPokemonName = e.target["pokemon-filter"].value.trim().toLowerCase()
     navigate(`/pokedex/${inputPokemonName}`)
   }
-
-  console.log(typeSelected)
   // For filter by type
 
   const handleChange = (e) => {
@@ -60,7 +70,7 @@ const Pokedex = () => {
         <option value="choose-by-type">Choose by type</option>
         {
           types?.map(type => (
-            <option value={type.name} key={type.url}>
+            <option value={type.url} key={type.url}>
               {type.name}
             </option>
           ))
