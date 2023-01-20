@@ -16,11 +16,13 @@ const Pokedex = () => {
 
   const [types, setTypes] = useState()
 
-  const [typeSelected, setTypeSelected] = useState("Choose by type")
+  const [typeSelected, setTypeSelected] = useState("choose-by-type")
+
+  console.log(typeSelected)
 
   useEffect(() => {
     //Get all pokemons
-    if (typeSelected !== "Choose by type") {
+    if (typeSelected !== "choose-by-type") {
       const URL = typeSelected
       axios.get(URL)
         .then(res => setPokemons(res.data?.pokemon.map(e => e.pokemon)))
@@ -28,7 +30,7 @@ const Pokedex = () => {
     }
     else {
       console.log("executed here")
-      const URL = "https://pokeapi.co/api/v2/pokemon/?limit=151&offset=0"
+      const URL = "https://pokeapi.co/api/v2/pokemon/?limit=151&offset=151"
       axios.get(URL)
         .then(res => setPokemons(res.data?.results))
         .catch(err => console.log(err))
@@ -67,7 +69,6 @@ const Pokedex = () => {
   const initialPoke = (page - 1) * pokePerPage
   const finalPoke = page * pokePerPage
   const maxPage = pokemons && Math.ceil(pokemons.length / pokePerPage)
-  console.log(maxPage)
   
   return (
     <div>

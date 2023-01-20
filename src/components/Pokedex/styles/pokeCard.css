@@ -154,3 +154,72 @@
 .bg-dark {
   background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
 }
+
+
+/*  Dynamic color names and numbers */
+
+
+.color-grass {
+  color: #416460
+}
+
+.color-fire {
+  color: #E75C35;
+
+}
+
+.color-water {
+  color: #1479FB
+}
+
+.color-bug {
+  color: #4AB648
+}
+
+.color-normal {
+  color: #735259
+}
+
+.color-poison {
+  color: #5B3184
+}
+
+.color-ghost {
+  color: #323569
+}
+
+.color-fighting {
+  color: #96402A
+}
+
+.color-rock {
+  color: #7E7E7E
+}
+
+.color-dark {
+  color: #030706
+}
+
+.cpplor-ice {
+  color: #6FBEDF
+}
+
+.color-steel {
+  color: #4F4F4F
+}
+
+.color-dragon {
+  color: #478A93
+}
+
+.color-psychic {
+  color: #971B45
+}
+
+.color-electric {
+  color: #0C1395
+}
+
+.color-ground {
+  color: #654008
+}
