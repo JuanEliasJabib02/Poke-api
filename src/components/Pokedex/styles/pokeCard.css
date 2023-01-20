@@ -1,6 +1,6 @@
 .poke-card {
   width: 100%;
-  max-width: 32rem;
+  max-width: 30rem;
   border: 0.2rem solid black;
   border-radius: 0.7rem;
 }
@@ -60,11 +60,93 @@
   grid-template-columns: repeat(3, 1fr);
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem 0.5rem;
 }
 
 .poke-card__stat {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem
+}
+
+.poke-card__name-stat {
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.poke-card__value-stat {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+
+/* Dinamic types bg */
+
+.bg-grass {
+  background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+
+.bg-fire {
+  background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+}
+
+.bg-water {
+  background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+}
+
+.bg-bug {
+  background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+}
+
+.bg-normal {
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+}
+
+.bg-poison {
+  background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+}
+
+.bg-ground {
+  background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+}
+
+.bg-fighting {
+  background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+}
+
+.bg-rock {
+  background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+}
+
+.bg-ghost {
+  background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+}
+
+
+.bg-dragon {
+  background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+}
+
+.bg-electric {
+
+  background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+}
+
+.bg-psychic {
+  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+}
+
+/* Fairy */
+
+.bg-fairy {
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+}
+
+.bg-ice {
+
+  background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
 }

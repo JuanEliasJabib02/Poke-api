@@ -23,7 +23,7 @@ const PokemonCard = ({ url }) => {
   }
   return (
     <article className='poke-card' onClick={handleClick}>
-      <header className='poke-card__header'>
+      <header className={`poke-card__header bg-${pokemon?.types[0].type.name}`}>
         <img className='poke-card__sprite' src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
       </header>
       <section className='poke-card__body'>
