@@ -5,6 +5,7 @@ import axios from "axios"
 import PokemonCard from '../components/Pokedex/PokemonCard'
 import { useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pokedex/Pagination'
+import "./styles/pokedex.css"
 
 const Pokedex = () => {
 
@@ -72,22 +73,36 @@ const Pokedex = () => {
   
   return (
     <div>
-      <h2>Welcome {nameTrainer}, here you can find your favorite pokemon</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" id="pokemon-filter" />
-        <button>Search</button>
-      </form>
+      <header className='pokedex__header'> 
+        <img className='pokedex__header-img' src="/public/Home/homeBanner.png" alt="" />
+        <div className='pokedex__header-low-side'></div>
+        <div className='pokedex__pokeball'>
+          <div className="pokedex__pokeball-inner"></div>
+        </div>
 
-      <select onChange={handleChange}>
-        <option value="choose-by-type">Choose by type</option>
-        {
-          types?.map(type => (
-            <option value={type.url} key={type.url}>
-              {type.name}
-            </option>
-          ))
-        } 
-      </select>
+      </header>
+
+      <h2 className='pokedex__welcome'>Welcome {nameTrainer}, here you can find your favorite pokemon</h2>
+      <section className='pokedex__inputs'>
+        <form
+          onSubmit={handleSubmit}
+          className='pokedex__search-form'
+        >
+          <input  className='pokedex__input-search' type="text" id="pokemon-filter" />
+          <button className='pokedex__button-search'>Search</button>
+
+        </form>
+        <select  className='pokedex__select-type' onChange={handleChange}>
+          <option className='pokedex__select-options' value="choose-by-type">Choose by type</option>
+          {
+            types?.map(type => (
+              <option value={type.url} key={type.url}>
+                {type.name}
+              </option>
+            ))
+          } 
+          </select> 
+        </section>
       <div className='poke-container'>
         {
           pokemons?.slice(initialPoke,finalPoke).map(pokemon => (
@@ -98,11 +113,14 @@ const Pokedex = () => {
           ))
         }
       </div>
-      < Pagination
-        page={page}
-        maxPage={maxPage}
-        setPage={setPage}
-      />
+
+      <footer className='pokedex__pagination'>
+        < Pagination
+          page={page}
+          maxPage={maxPage}
+          setPage={setPage}
+          />
+      </footer>
     </div>
   )
 }

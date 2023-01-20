@@ -1,6 +1,10 @@
 .pagination__list {
   display: flex;
-  gap: 1rem
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  /*   margin: 0 auto; */
 }
 
 .pagination__item {
