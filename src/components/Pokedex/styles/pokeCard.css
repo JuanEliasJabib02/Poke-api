@@ -4,6 +4,7 @@
   border: 1.2rem solid black;
   border-radius: 0.7rem;
   background-color: 1rem;
+
 }
 
 .poke-card__header {
@@ -153,13 +154,13 @@
 }
 
 .bg-psychic {
-  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+  background: linear-gradient(179.75deg, #E62D2D -19.96%, #D13E3E 43.67%, #F07F7F 138.4%);
 }
 
 /* Fairy */
 
 .bg-fairy {
-  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
 }
 
 .bg-ice {
@@ -229,7 +230,7 @@
 }
 
 .color-psychic {
-  color: #971B45
+  color: #E52D2D
 }
 
 .color-electric {
@@ -240,6 +241,9 @@
   color: #654008
 }
 
+.color-fairy {
+  color: #971B45
+}
 
 /* Dynamic border */
 
@@ -298,7 +302,7 @@
 }
 
 .border-psychic {
-  border: 1.2rem solid #971B45
+  border: 1.2rem solid #E52D2D
 }
 
 .border-electric {
@@ -310,5 +314,5 @@
 }
 
 .border-fairy {
-  border: 1.2rem solid #735259
+  border: 1.2rem solid #971B45
 }
