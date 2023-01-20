@@ -1,12 +1,12 @@
 .poke-card {
   width: 100%;
   max-width: 30rem;
-  border: 0.2rem solid black;
+  border: 1.2rem solid black;
   border-radius: 0.7rem;
+  background-color: 1rem;
 }
 
 .poke-card__header {
-  background-color: #aaa;
   height: 11rem;
   position: relative;
 }
@@ -16,12 +16,12 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  border: 0.2rem solid green;
+
 }
+
 
 .poke-card__body {
   padding-top: 4rem;
-  border: 0.2rem solid yellow;
 }
 
 .poke-card__name {
@@ -32,7 +32,7 @@
 }
 
 .poke-card__types-container {
-  border: 0.2rem solid pink;
+
   display: flex;
   justify-content: center;
   gap: 1rem
@@ -42,6 +42,17 @@
   position: relative;
   font-weight: 500;
   text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.poke-card__type-label {
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .poke-card__type:nth-child(2)::before {
@@ -50,12 +61,17 @@
   left: -0.7rem;
 }
 
+.poke-card__hr {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
 .poke-card__footer {
   padding: 1rem 0.4rem;
 }
 
 .poke-card__stats-container {
-  border: 0.2rem solid purple;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   flex-direction: column;
@@ -222,4 +238,77 @@
 
 .color-ground {
   color: #654008
+}
+
+
+/* Dynamic border */
+
+.border-grass {
+  border: 1.2rem solid #416460dc;
+  border-radius: 1.4rem
+}
+
+.border-fire {
+  border: 1.2rem solid #e75b35;
+  border-radius: 1.4rem
+}
+
+.border-water {
+  border: 1.2rem solid #1479FB
+}
+
+.border-bug {
+  border: 1.2rem solid #4AB648
+}
+
+.border-normal {
+  border: 1.2rem solid #735259
+}
+
+.border-poison {
+  border: 1.2rem solid #5B3184
+}
+
+.border-ghost {
+  border: 1.2rem solid #323569
+}
+
+.border-fighting {
+  border: 1.2rem solid #96402A
+}
+
+.border-rock {
+  border: 1.2rem solid #7E7E7E
+}
+
+.border-dark {
+  border: 1.2rem solid #030706
+}
+
+.border-ice {
+  border: 1.2rem solid #6FBEDF
+}
+
+.border-steel {
+  border: 1.2rem solid #4F4F4F
+}
+
+.border-dragon {
+  border: 1.2rem solid #478A93
+}
+
+.border-psychic {
+  border: 1.2rem solid #971B45
+}
+
+.border-electric {
+  border: 1.2rem solid #0C1395
+}
+
+.border-ground {
+  border: 1.2rem solid #654008
+}
+
+.border-fairy {
+  border: 1.2rem solid #735259
 }
