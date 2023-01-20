@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
+import "./styles/pokeCard.css"
 
 const PokemonCard = ({ url }) => {
 
@@ -21,29 +22,29 @@ const PokemonCard = ({ url }) => {
     navigate(`/pokedex/${pokemon.id}`)
   }
   return (
-    <article onClick={handleClick}>
-      <header>
-        <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
+    <article className='poke-card' onClick={handleClick}>
+      <header className='poke-card__header'>
+        <img className='poke-card__sprite' src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
       </header>
-      <section>
-      <h3>{pokemon?.name}</h3>
-        <ul>
+      <section className='poke-card__body'>
+      <h3 className='poke-card__name'>{pokemon?.name}</h3>
+        <ul className='poke-card__types-container'>
         {
             pokemon?.types.map(type => (
-              <li key={type.type.name}>
+              <li className='poke-card__type' key={type.type.name}>
                 <p>{type.type.name}</p>
               </li>
             ))
         }
         </ul>
       </section>
-      <footer>
-        <ul>
+      <footer className='poke-card__footer'>
+        <ul className='poke-card__stats-container'>
           {
             pokemon?.stats.map(stat => (
-              <li key={stat.stat.name}>
-                <span>{stat.stat.name}</span>
-                <span>{stat.base_stat}</span>
+              <li className='poke-card__stat' key={stat.stat.name}>
+                <span className='poke-card__name-stat'>{stat.stat.name}</span>
+                <span className='poke-card__value-stat'>{stat.base_stat}</span>
               </li>
             ))
           }
