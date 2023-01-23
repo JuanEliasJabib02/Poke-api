@@ -1,0 +1,104 @@
+.home__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home__banner {
+  width: 100%;
+  max-width: 60rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.home__welcome {
+  font-size: 5rem;
+  color: #FE1936;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.home__text-welcome {
+  font-size: 2.5rem
+}
+
+
+.home__form {
+  display: flex;
+  width: 60rem;
+  height: 6rem;
+  margin-top: 6rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10rem;
+}
+
+.home__input {
+  width: 60%;
+  font-size: 2rem;
+  padding: 2rem;
+  appearance: none;
+  border: none;
+}
+
+.home__btn {
+  width: 40%;
+  background-color: #D93F3F;
+  font-size: 2.4rem;
+  color: #FFFFFF
+}
+
+
+.home__footer {
+  background-color: #DD1A1A;
+  width: 100%;
+  height: 14rem;
+  margin-top: 20rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.home__footer-low-side {
+  background-color: black;
+  width: 100%;
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.home__pokeball {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  position: absolute;
+  right: 8rem;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  border: 1rem solid black;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__pokeball-inner {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #212121;
+  border: 0.5rem solid black
+}
+
+
+@media all and (max-width:622px) {
+  .home__banner {
+    max-width: 30rem;
+  }
+}
