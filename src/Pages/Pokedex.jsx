@@ -82,13 +82,13 @@ const Pokedex = () => {
 
       </header>
 
-      <h2 className='pokedex__welcome'>Welcome {nameTrainer}, here you can find your favorite pokemon</h2>
+      <h2 className='pokedex__welcome'> <span>Welcome {nameTrainer}</span>, here you can find your favorite pokemon</h2>
       <section className='pokedex__inputs'>
         <form
           onSubmit={handleSubmit}
           className='pokedex__search-form'
         >
-          <input  className='pokedex__input-search' type="text" id="pokemon-filter" />
+          <input  placeholder='Search a pokemon' className='pokedex__input-search' type="text" id="pokemon-filter" />
           <button className='pokedex__button-search'>Search</button>
 
         </form>
@@ -97,7 +97,7 @@ const Pokedex = () => {
           {
             types?.map(type => (
               <option value={type.url} key={type.url}>
-                {type.name}
+                <span>{type.name}</span>
               </option>
             ))
           } 
