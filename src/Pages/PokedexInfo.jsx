@@ -22,7 +22,7 @@ const PokedexInfo = () => {
   return (
     <div className='pokedex-info'>
         <header className='pokedex-info__header'> 
-        <img className='pokedex-info__header-img' src="/public/Home/homeBanner.png" alt="" />
+        <img className='pokedex-info__header-img' src="/Home/homeBanner.png" alt="" />
         <div className='pokedex-info__header-low-side'></div>
         <div className='pokedex-info__pokeball'>
           <div className="pokedex-info__pokeball-inner"></div>

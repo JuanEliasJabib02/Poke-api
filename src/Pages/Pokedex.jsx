@@ -74,7 +74,7 @@ const Pokedex = () => {
   return (
     <div>
       <header className='pokedex__header'> 
-        <img className='pokedex__header-img' src="/public/Home/homeBanner.png" alt="" />
+        <img className='pokedex__header-img' src="/Home/homeBanner.png" alt="" />
         <div className='pokedex__header-low-side'></div>
         <div className='pokedex__pokeball'>
           <div className="pokedex__pokeball-inner"></div>
