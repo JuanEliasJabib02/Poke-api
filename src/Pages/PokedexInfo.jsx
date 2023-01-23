@@ -73,13 +73,29 @@ const PokedexInfo = () => {
               ))
             }
           </ul>
-          
-          <div className='pokedex-info-card__poke-stats'>
-
-          </div>
+              
+          <ul className='poke-card__stats-container'>
+            {
+              pokemon?.stats.map(stat => (
+                <li className='poke-card__stat' key={stat.stat.name}>
+                  <span className='poke-card__name-stat'>{stat.stat.name}</span>
+                  <span className={`poke-card__value-stat color-${pokemon?.types[0].type.name}`}>{stat.base_stat}</span>
+                </li>
+              ))
+            }
+          </ul>
         </section>
 
         <footer className='pokedex-info-card__movements'>
+          <ul className='poke-info__moves-container'>
+            {
+              pokemon?.moves.map(move => (
+                <li>
+                  {move.move.name}
+                </li>
+              ))
+            }
+          </ul>
 
         </footer>
       </article>
