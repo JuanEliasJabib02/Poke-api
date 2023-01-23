@@ -44,7 +44,544 @@
   border: 0.5rem solid black
 }
 
+/* CARD */
+
+.pokedex-info-card {
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+  width: 110rem;
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 20rem;
+  background-color: #ffffff;
+}
+
+.pokedex-info-card__header {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
 .pokedex-info-card__img {
   width: 100%;
-  max-width: 20rem;
+  max-width: 30rem;
+  position: absolute;
+  top: -18rem;
+  ;
+}
+
+.pokedex-info-card__prebody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokedex-info-card__id {
+  border: 0.1rem solid #D3D3D3;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.pokedex-info-card__name {
+  font-size: 4rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.pokedex-info-card__base-info {
+  margin-top: 1rem;
+  display: flex;
+  width: 20rem;
+  height: auto;
+  justify-content: space-evenly;
+}
+
+.pokedex-info-card__weight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+.pokedex-info-card__weight>span {
+  color: #0F0F2D;
+  font-weight: 400;
+  font-size: 1rem
+}
+
+.pokedex-info-card__weight>p {
+  font-size: 2.5rem;
+  color: #0F0F2D;
+  font-weight: 500;
+}
+
+.pokedex-info-card__height {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pokedex-info-height>span {
+  color: #0F0F2D;
+  font-weight: 400;
+  font-size: 1rem
+}
+
+.pokedex-info-card__height>p {
+  font-size: 2.5rem;
+  color: #0F0F2D;
+  font-weight: 500;
+}
+
+
+.pokedex-info-card__body {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+
+.pokedex-info-card__types-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pokedex-info-card__type-container {
+  display: flex;
+}
+
+
+.pokedex-info-card__type {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 0.2rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.pokedex-info-card__type-label {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+
+.pokedex-info-card__ability-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pokedex-info-card__ability-container-item {
+  display: flex;
+  gap: 2rem;
+}
+
+.pokedex-info-card__ability-label {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.pokedex-info-card__ability {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid #D3D3D3;
+  border-radius: 0.2rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 500;
+  width: 18rem;
+  height: 4rem;
+}
+
+.poke-info-card__footer {
+  margin-top: 10rem;
+}
+
+
+.poke-info-card__stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem 0.5rem;
+}
+
+.poke-info-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem
+}
+
+.poke-info-card__name-stat {
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.poke-info-card__value-stat {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dinamic types bg */
+
+.bg-grass {
+  background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+
+.bg-fire {
+  background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+}
+
+.bg-water {
+  background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+}
+
+.bg-bug {
+  background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+}
+
+.bg-normal {
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+}
+
+.bg-poison {
+  background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+}
+
+.bg-ground {
+  background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+}
+
+.bg-fighting {
+  background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+}
+
+.bg-rock {
+  background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+}
+
+.bg-ghost {
+  background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+}
+
+
+.bg-dragon {
+  background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+}
+
+.bg-electric {
+
+  background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+}
+
+.bg-psychic {
+  background: linear-gradient(179.75deg, #E62D2D -19.96%, #D13E3E 43.67%, #F07F7F 138.4%);
+}
+
+/* Fairy */
+
+.bg-fairy {
+  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+}
+
+.bg-ice {
+
+  background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+}
+
+.bg-dark {
+  background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+}
+
+
+/*  Dynamic color names and numbers */
+
+
+.color-grass {
+  color: #416460
+}
+
+.color-fire {
+  color: #E75C35;
+
+}
+
+.color-water {
+  color: #1479FB
+}
+
+.color-bug {
+  color: #4AB648
+}
+
+.color-normal {
+  color: #735259
+}
+
+.color-poison {
+  color: #5B3184
+}
+
+.color-ghost {
+  color: #323569
+}
+
+.color-fighting {
+  color: #96402A
+}
+
+.color-rock {
+  color: #7E7E7E
+}
+
+.color-dark {
+  color: #030706
+}
+
+.cpplor-ice {
+  color: #6FBEDF
+}
+
+.color-steel {
+  color: #4F4F4F
+}
+
+.color-dragon {
+  color: #478A93
+}
+
+.color-psychic {
+  color: #E52D2D
+}
+
+.color-electric {
+  color: #0C1395
+}
+
+.color-ground {
+  color: #654008
+}
+
+.color-fairy {
+  color: #971B45
+}
+
+/* Dynamic border */
+
+.border-grass {
+  border: 1.2rem solid #416460dc;
+  border-radius: 1.4rem
+}
+
+.border-fire {
+  border: 1.2rem solid #e75b35;
+  border-radius: 1.4rem
+}
+
+.border-water {
+  border: 1.2rem solid #1479FB
+}
+
+.border-bug {
+  border: 1.2rem solid #4AB648
+}
+
+.border-normal {
+  border: 1.2rem solid #735259
+}
+
+.border-poison {
+  border: 1.2rem solid #5B3184
+}
+
+.border-ghost {
+  border: 1.2rem solid #323569
+}
+
+.border-fighting {
+  border: 1.2rem solid #96402A
+}
+
+.border-rock {
+  border: 1.2rem solid #7E7E7E
+}
+
+.border-dark {
+  border: 1.2rem solid #030706
+}
+
+.border-ice {
+  border: 1.2rem solid #6FBEDF
+}
+
+.border-steel {
+  border: 1.2rem solid #4F4F4F
+}
+
+.border-dragon {
+  border: 1.2rem solid #478A93
+}
+
+.border-psychic {
+  border: 1.2rem solid #E52D2D
+}
+
+.border-electric {
+  border: 1.2rem solid #0C1395
+}
+
+.border-ground {
+  border: 1.2rem solid #654008
+}
+
+.border-fairy {
+  border: 1.2rem solid #971B45
+}
+
+
+/* Types */
+
+.type-grass {
+  background-color: #416460dc;
+}
+
+.type-fire {
+  background-color: #e75b35;
+}
+
+.type-water {
+  background-color: #1479FB
+}
+
+.border-bug {
+  background-color: #4AB648
+}
+
+.type-normal {
+  background-color: #735259
+}
+
+.type-poison {
+  background-color: #5B3184
+}
+
+.type-ghost {
+  background-color: #323569
+}
+
+.type-fighting {
+  background-color: #96402A
+}
+
+.type-rock {
+  background-color: #7E7E7E
+}
+
+.type-dark {
+  background-color: #030706
+}
+
+.type-ice {
+  background-color: #6FBEDF
+}
+
+.type-steel {
+  background-color: #4F4F4F
+}
+
+.border-dragon {
+  background-color: #478A93
+}
+
+.type-psychic {
+  background-color: #E52D2D
+}
+
+.type-electric {
+  background-color: #0C1395
+}
+
+.type-ground {
+  background-color: #654008
+}
+
+.type-fairy {
+  background-color: #971B45
 }
