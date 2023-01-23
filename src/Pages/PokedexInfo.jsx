@@ -100,10 +100,12 @@ const PokedexInfo = () => {
       </article>
 
       <article className='pokedex-moves-card'>
-          <ul className='pokdex-moves-card__container'>
+
+        <h2>Movements</h2>
+          <ul className='pokedex-moves-card__container'>
             {
               pokemon?.moves.map(move => (
-                <li>
+                <li className='move'>
                   {move.move.name}
                 </li>
               ))
