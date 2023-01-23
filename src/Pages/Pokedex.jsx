@@ -96,8 +96,8 @@ const Pokedex = () => {
           <option className='pokedex__select-options' value="choose-by-type">Choose by type</option>
           {
             types?.map(type => (
-              <option value={type.url} key={type.url}>
-                <span>{type.name}</span>
+              <option  value={type.url} key={type.url}>
+                <span className='pokedex__options-select' >{type.name}</span>
               </option>
             ))
           } 

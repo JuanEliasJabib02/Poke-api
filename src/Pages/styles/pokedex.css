@@ -102,6 +102,7 @@
 
 .pokedex__select-type {
   width: 40rem;
+  background-color: white;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   border: none;
   color: black;
@@ -109,13 +110,15 @@
   font-size: 2rem;
   text-transform: capitalize;
 
+
 }
 
 .pokedex__select-type>option {
   font-size: 2rem;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 300;
 }
+
 
 
 /* Mediaqueris */
